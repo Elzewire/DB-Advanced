@@ -1,3 +1,3 @@
 BEGIN;
-    INSERT INTO public.unlogged_table VALUES (:id, 'test');
+    INSERT INTO public.unlogged_table VALUES ('test');
 END;
