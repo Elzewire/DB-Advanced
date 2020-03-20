@@ -1,3 +1,3 @@
 BEGIN;
-    INSERT INTO public.unlogged_table VALUES ('test');
+    INSERT INTO public.unlogged_table(name) VALUES ('test');
 END;
