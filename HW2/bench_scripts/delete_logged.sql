@@ -1,5 +1,4 @@
-\set ninserts :scale
-\set id random(1, :ninserts)
+\set id random(1, 102651)
 BEGIN;
     DELETE FROM public.logged_table WHERE id = :id;
 END;

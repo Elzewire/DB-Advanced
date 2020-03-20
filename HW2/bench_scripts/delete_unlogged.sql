@@ -1,5 +1,4 @@
-\set ninserts :scale
-\set id random(1, :ninserts)
+\set id random(1, 167794)
 BEGIN;
     DELETE FROM public.unlogged_table WHERE id = :id;
 END;
