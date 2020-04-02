@@ -27,10 +27,10 @@ CHECK (id > 400000 and id <= 500000);
 ALTER TABLE inherited6 ADD CONSTRAINT partition_check
 CHECK (id > 500000 and id <= 600000);
 ALTER TABLE inherited7 ADD CONSTRAINT partition_check
-CHECK (id > 600000 and id <= 100000);
+CHECK (id > 600000 and id <= 700000);
 ALTER TABLE inherited8 ADD CONSTRAINT partition_check
-CHECK (id > 700000 and id <= 100000);
+CHECK (id > 700000 and id <= 800000);
 ALTER TABLE inherited9 ADD CONSTRAINT partition_check
-CHECK (id > 800000 and id <= 100000);
+CHECK (id > 800000 and id <= 900000);
 ALTER TABLE inherited10 ADD CONSTRAINT partition_check
 CHECK (id > 900000 and id <= 1000000);
