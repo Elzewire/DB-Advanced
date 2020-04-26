@@ -1,4 +1,4 @@
-CREATE FUNCTION public.f_sum_matrices(
+CREATE OR REPLACE FUNCTION public.f_sum_matrices(
     m1 integer[][],
     m2 integer[][]
 ) RETURNS integer[][] AS
@@ -9,9 +9,10 @@ BEGIN
     IF array_dims(m1) != array_dims(m2) THEN
         RAISE EXCEPTION 'Matrices must have same dimensions!';
     END IF;
+    sum := array_fill(0, ARRAY[array_upper(m1, 1), array_upper(m1, 2)]);
     FOR i IN array_lower(m1, 1)..array_upper(m1, 1) LOOP
         FOR j IN array_lower(m1, 2)..array_upper(m1, 2) LOOP
-            sum[i][j] := m1[i][j] + m2[i][j];
+            sum[i][j] = m1[i][j] + m2[i][j];
         END LOOP;
     END LOOP;
     RETURN sum;
