@@ -80,7 +80,7 @@ CREATE AGGREGATE public.complex_mul(public.complex_type) (
     stype = public.complex_type,
     combinefunc = public.f_complex_mul,
     finalfunc = public.f_complex_mul_final,
-    initcond = '(0, 0)',
+    initcond = '(1, 0)',
     parallel = safe
 );
 
@@ -109,6 +109,6 @@ CREATE AGGREGATE public.complex_div(public.complex_type) (
     stype = public.complex_type,
     combinefunc = public.f_complex_div,
     finalfunc = public.f_complex_div_final,
-    initcond = '(0, 0)',
+    initcond = '(1, 0)',
     parallel = safe
 );
