@@ -1,1 +1,0 @@
-VACUUM FULL test_vacuum;
