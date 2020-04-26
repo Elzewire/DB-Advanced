@@ -6,6 +6,9 @@ $$
 DECLARE
     sum integer[][];
 BEGIN
+    IF array_lower(m1, 1) IS NULL THEN
+        RETURN m2;
+    END IF;
     IF array_dims(m1) != array_dims(m2) THEN
         RAISE EXCEPTION 'Matrices must have same dimensions!';
     END IF;
@@ -33,5 +36,6 @@ CREATE AGGREGATE public.sum_matrices(integer[][]) (
     stype = integer[][],
     combinefunc = public.f_sum_matrices,
     finalfunc = public.f_sum_matrices_final,
+    initcond = '{}',
     parallel = safe
 );
