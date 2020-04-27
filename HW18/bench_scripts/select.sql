@@ -7,5 +7,5 @@ BEGIN;
             INNER JOIN t5 ON t4.id = t5.id
             INNER JOIN t6 ON t5.id = t6.id
             INNER JOIN t7 ON t6.id = t7.id
-            INNER JOIN t8 ON t7.id = t8.id
+            INNER JOIN t8 ON t7.id = t8.id;
 END;
