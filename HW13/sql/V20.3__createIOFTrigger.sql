@@ -2,7 +2,7 @@ CREATE OR REPLACE FUNCTION insert_into_view()
     RETURNS TRIGGER AS
     $BODY$
         BEGIN
-            INSERT INTO iof_trg_table VALUES (NEW.id, NEW.name);
+            INSERT INTO iof_trg_table VALUES (NEW.sum, NEW.name);
             RETURN NEW;
         END;
     $BODY$
