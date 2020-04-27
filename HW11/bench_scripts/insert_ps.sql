@@ -1,7 +1,5 @@
 BEGIN;
-    PREPARE my_ps (integer, varchar) AS
-        INSERT INTO pst_table2 VALUES ($1, $2);
-
+    PREPARE my_ps (integer, varchar) AS INSERT INTO pst_table2 VALUES ($1, $2);
     EXECUTE my_ps (1, 'insert');
     EXECUTE my_ps (2, 'insert');
     EXECUTE my_ps (3, 'insert');
