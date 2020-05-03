@@ -1,0 +1,3 @@
+CREATE SCHEMA foreign1;
+CREATE SCHEMA foreign2;
+CREATE SCHEMA foreign3;
