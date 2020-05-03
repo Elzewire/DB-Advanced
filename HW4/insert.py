@@ -17,10 +17,10 @@ for i in range(1, 10001):
       query = "INSERT INTO public.f_table1(id, content) VALUES (%s, %s);"
       cursor.execute(query, data)
    elif id % 3 == 1:
-      query = "INSERT INTO public.f_table1(id, content) VALUES (%s, %s);"
+      query = "INSERT INTO public.f_table2(id, content) VALUES (%s, %s);"
       cursor.execute(query, data)
    elif id % 3 == 2:
-      query = "INSERT INTO public.f_table1(id, content) VALUES (%s, %s);"
+      query = "INSERT INTO public.f_table3(id, content) VALUES (%s, %s);"
       cursor.execute(query, data)
 
 # Commit your changes in the database
