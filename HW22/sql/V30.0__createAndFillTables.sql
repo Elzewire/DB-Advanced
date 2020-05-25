@@ -19,9 +19,9 @@ INSERT INTO t_1000(id, name)
 
 INSERT INTO t_10000(id, name)
     SELECT (random() * 10000)::integer, 'test' || i
-        FROM generate_series(1, 1000) AS k(i);
+        FROM generate_series(1, 10000) AS k(i);
 
 INSERT INTO t_100000(id, name)
     SELECT (random() * 100000)::integer, 'test' || i
-        FROM generate_series(1, 1000) AS k(i);
+        FROM generate_series(1, 100000) AS k(i);
 
